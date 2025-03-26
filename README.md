@@ -42,3 +42,14 @@ Request for POST (POST /persons/bulk-upload)
         {"person_id": "e123", "course_id": "c2", "name": "John Doe", "score": 4}
     ]
     }
+Response for POST
+##
+    json
+    {
+    "message": "Entrepreneurs' data uploaded successfully",
+    "persons": [
+        {"person_id": "e123", "course_id": "c1", "name": "John Doe", "score": 5},
+        {"person_id": "e124", "course_id": "c2", "name": "Jane Doe", "score": 5},
+        {"person_id": "e123", "course_id": "c2", "name": "John Doe", "score": 4}
+    ]
+    }
