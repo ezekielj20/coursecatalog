@@ -18,7 +18,7 @@ How to run the api
         sh
         python test.py
 
-Request
+Request for GET (GET /persons/progress/e123)
 ##
     curl -X GET "http://127.0.0.1:5000/progress/e123"
 Response
@@ -29,4 +29,16 @@ Response
     "name": "John Doe",
     "courses_taken": ["Accounting 101", "Marketing 101"],
     "gpa": 4.5
+    }
+
+
+Request for POST (POST /persons/bulk-upload)
+##
+    json
+     {
+    "persons": [
+        {"person_id": "e123", "course_id": "c1", "name": "John Doe", "score": 5},
+        {"person_id": "e124", "course_id": "c2", "name": "Jane Doe", "score": 5},
+        {"person_id": "e123", "course_id": "c2", "name": "John Doe", "score": 4}
+    ]
     }
